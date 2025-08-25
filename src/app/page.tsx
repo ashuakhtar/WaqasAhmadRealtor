@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
                 Find Your Dream Home in Surrey
               </h2>
               <p className="text-xl mb-8 text-blue-100">
-                Your trusted real estate partner in British Columbia's fastest-growing city. 
+                Your trusted real estate partner in British Columbia&apos;s fastest-growing city. 
                 Let me help you navigate the Surrey real estate market with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -95,7 +95,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Properties</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover exceptional homes in Surrey's most desirable neighborhoods
+                             Discover exceptional homes in Surrey&apos;s most desirable neighborhoods
             </p>
           </div>
           
@@ -182,9 +182,9 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">About Waqas Ahmad</h2>
               <p className="text-gray-600 mb-6">
-                With over 8 years of experience in the Surrey real estate market, I specialize in helping families 
-                find their perfect home in British Columbia's most vibrant city. My deep knowledge of local 
-                neighborhoods, market trends, and community amenities ensures you make informed decisions.
+                                 With over 8 years of experience in the Surrey real estate market, I specialize in helping families 
+                 find their perfect home in British Columbia&apos;s most vibrant city. My deep knowledge of local 
+                 neighborhoods, market trends, and community amenities ensures you make informed decisions.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -213,8 +213,8 @@ export default function Home() {
                     <span className="text-sm font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold">Fastest Growing City</h4>
-                    <p className="text-blue-100 text-sm">BC's second-largest city with excellent growth potential</p>
+                                         <h4 className="font-semibold">Fastest Growing City</h4>
+                     <p className="text-blue-100 text-sm">BC&apos;s second-largest city with excellent growth potential</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -255,7 +255,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-            <p className="text-gray-600">Ready to find your dream home? Let's connect!</p>
+            <p className="text-gray-600">Ready to find your dream home? Let&apos;s connect!</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">

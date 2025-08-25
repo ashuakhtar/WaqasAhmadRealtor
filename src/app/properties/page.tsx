@@ -119,8 +119,8 @@ export default function PropertiesPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Properties in Surrey</h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Discover exceptional homes in Surrey's most desirable neighborhoods. 
-              From cozy condos to luxury estates, find your perfect match.
+                             Discover exceptional homes in Surrey&apos;s most desirable neighborhoods. 
+               From cozy condos to luxury estates, find your perfect match.
             </p>
           </div>
         </div>
