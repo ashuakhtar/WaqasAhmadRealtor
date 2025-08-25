@@ -262,8 +262,8 @@ export default function PropertiesPage() {
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-gray-400 text-sm">
-                <p>(604) 555-0123</p>
-                <p>waqas@surreyrealestate.ca</p>
+                <p>(604) 613-3056</p>
+                <p>realtorwaqas@gmail.com</p>
                 <p>1234 King George Blvd<br />Surrey, BC V4A 1A1</p>
               </div>
             </div>

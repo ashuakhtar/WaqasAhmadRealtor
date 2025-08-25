@@ -270,7 +270,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Phone</p>
-                    <p className="text-gray-600">(604) 555-0123</p>
+                    <p className="text-gray-600">(604) 613-3056</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -281,7 +281,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <p className="text-gray-600">waqas@surreyrealestate.ca</p>
+                    <p className="text-gray-600">realtorwaqas@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -293,7 +293,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Office</p>
-                    <p className="text-gray-600">1234 King George Blvd, Surrey, BC V4A 1A1</p>
+                    <p className="text-gray-600">15539 91a Ave, Surrey, BC, V3R 9X1</p>
                   </div>
                 </div>
               </div>

@@ -102,9 +102,9 @@ Update the following files to customize content:
 
 **Waqas Ahmad**  
 Real Estate Professional  
-Phone: (604) 555-0123  
-Email: waqas@surreyrealestate.ca  
-Office: 1234 King George Blvd, Surrey, BC V4A 1A1
+Phone: (604) 613-3056  
+Email: realtorwaqas@gmail.com  
+Office: 15539 91a Ave, Surrey, BC, V3R 9X1
 
 ## 🌟 Surrey Real Estate Highlights
 
