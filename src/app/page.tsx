@@ -293,7 +293,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Office</p>
-                    <p className="text-gray-600">15539 91a Ave, Surrey, BC, V3R 9X1</p>
+                    <p className="text-gray-600">12992 76 Ave, Surrey, BC, V3W 2V6 </p>
                   </div>
                 </div>
               </div>

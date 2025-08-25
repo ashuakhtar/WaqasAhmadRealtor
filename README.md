@@ -104,7 +104,7 @@ Update the following files to customize content:
 Real Estate Professional  
 Phone: (604) 613-3056  
 Email: realtorwaqas@gmail.com  
-Office: 15539 91a Ave, Surrey, BC, V3R 9X1
+Office: 12992 76 Ave, Surrey, BC, V3W 2V6 
 
 ## 🌟 Surrey Real Estate Highlights
 
