@@ -125,7 +125,7 @@ export default function Home() {
                   <span className="text-blue-400"> Lower Mainland</span>
                 </h2>
                 <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-2xl">
-                  Your trusted real estate partner in British Columbia's most vibrant region. 
+                  Your trusted real estate partner in British Columbia&apos;s most vibrant region. 
                   Let me help you navigate the Lower Mainland real estate market with confidence.
                 </p>
               </div>
@@ -185,7 +185,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Featured Properties</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover exceptional homes in Lower Mainland's most desirable neighborhoods
+              Discover exceptional homes in Lower Mainland&apos;s most desirable neighborhoods
             </p>
           </div>
           
@@ -319,7 +319,7 @@ export default function Home() {
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">About Waqas Ahmad</h2>
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
                   With over 8 years of experience in the Lower Mainland real estate market, I specialize in helping families 
-                  find their perfect home in British Columbia's most vibrant region. My deep knowledge of local 
+                  find their perfect home in British Columbia&apos;s most vibrant region. My deep knowledge of local 
                   neighborhoods, market trends, and community amenities ensures you make informed decisions.
                 </p>
               </div>
@@ -351,7 +351,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="text-xl font-semibold mb-2">Fastest Growing Region</h4>
-                    <p className="text-blue-100 text-lg leading-relaxed">BC's most dynamic region with excellent growth potential</p>
+                    <p className="text-blue-100 text-lg leading-relaxed">BC&apos;s most dynamic region with excellent growth potential</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Get In Touch</h2>
-            <p className="text-xl text-gray-600">Ready to find your dream home? Let's connect!</p>
+            <p className="text-xl text-gray-600">Ready to find your dream home? Let&apos;s connect!</p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-16">
