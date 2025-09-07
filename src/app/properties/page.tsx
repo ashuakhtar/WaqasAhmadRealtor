@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ParagonIDX from "../../components/ParagonIDX";
+import NewListings from "../../components/NewListings";
 
 export default function PropertiesPage() {
   const properties = [
@@ -91,23 +93,27 @@ export default function PropertiesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-gradient-to-r from-blue-600 to-blue-800 shadow-sm border-b border-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">WA</span>
+              <div className="w-12 h-12 rounded-xl overflow-hidden">
+                <img 
+                  src="/logo/waLogo.jpeg" 
+                  alt="Waqas Ahmad Real Estate Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Waqas Ahmad</h1>
-                <p className="text-gray-600">Real Estate Professional</p>
+                <h1 className="text-2xl font-bold text-white">Waqas Ahmad</h1>
+                <p className="text-blue-100">Real Estate Professional</p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium">Home</Link>
-              <Link href="/properties" className="text-blue-600 font-medium">Properties</Link>
-              <Link href="/#about" className="text-gray-600 hover:text-blue-600 font-medium">About</Link>
-              <Link href="/#contact" className="text-gray-600 hover:text-blue-600 font-medium">Contact</Link>
+              <Link href="/" className="text-blue-100 hover:text-white font-medium">Home</Link>
+              <Link href="/properties" className="text-white font-medium">Properties</Link>
+              <Link href="/#about" className="text-blue-100 hover:text-white font-medium">About</Link>
+              <Link href="/#contact" className="text-blue-100 hover:text-white font-medium">Contact</Link>
             </nav>
           </div>
         </div>
@@ -126,35 +132,17 @@ export default function PropertiesPage() {
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="bg-white py-8 border-b">
+      {/* Advanced Search */}
+      <section className="bg-white py-12 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <select className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option>Property Type</option>
-              <option>Single Family</option>
-              <option>Townhouse</option>
-              <option>Condo</option>
-              <option>Apartment</option>
-            </select>
-            <select className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option>Price Range</option>
-              <option>$500K - $750K</option>
-              <option>$750K - $1M</option>
-              <option>$1M - $1.5M</option>
-              <option>$1.5M+</option>
-            </select>
-            <select className="p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option>Bedrooms</option>
-              <option>1+</option>
-              <option>2+</option>
-              <option>3+</option>
-              <option>4+</option>
-            </select>
-            <button className="bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Search
-            </button>
-          </div>
+          <ParagonIDX searchType="advanced" showResults={true} />
+        </div>
+      </section>
+
+      {/* New Listings */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewListings height="700px" title="New Listings in Surrey" />
         </div>
       </section>
 
@@ -185,7 +173,7 @@ export default function PropertiesPage() {
                     <span className="text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded">
                       {property.type}
                     </span>
-                    <button className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                    <button className="bg-gradient-to-r from-slate-700 to-slate-800 text-white py-2 px-4 rounded-lg hover:from-slate-800 hover:to-slate-900 transition-all duration-300 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                       View Details
                     </button>
                   </div>
@@ -206,7 +194,7 @@ export default function PropertiesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/#contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-8 py-3 rounded-lg font-semibold hover:from-slate-800 hover:to-slate-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Contact Me
             </Link>
@@ -226,8 +214,12 @@ export default function PropertiesPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">WA</span>
+                <div className="w-10 h-10 rounded-xl overflow-hidden">
+                  <img 
+                    src="/logo/waLogo.jpeg" 
+                    alt="Waqas Ahmad Real Estate Logo" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Waqas Ahmad</h3>
