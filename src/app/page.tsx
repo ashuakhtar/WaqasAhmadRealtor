@@ -94,7 +94,7 @@ export default function Home() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-blue-800 border-t border-blue-700 shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 border-t shadow-lg">
               <button
                 onClick={scrollToHome}
                 className="block w-full text-left px-3 py-2 text-white hover:text-blue-200 hover:bg-blue-700 rounded-md font-medium transition-colors duration-200"
