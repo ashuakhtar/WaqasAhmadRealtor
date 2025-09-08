@@ -208,15 +208,15 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             placeholder="City"
             value={searchParams.city}
             onChange={handleInputChange}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-700"
           />
           <select
             name="propertyType"
             value={searchParams.propertyType}
             onChange={handleInputChange}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-700"
           >
-            <option value="">Property Type</option>
+            <option value="" className="text-gray-500">Property Type</option>
             <option value="Single Family">Single Family</option>
             <option value="Townhouse">Townhouse</option>
             <option value="Apartment">Apartment</option>
@@ -231,7 +231,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             placeholder="Min Price"
             value={searchParams.priceMin}
             onChange={handleInputChange}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-700"
           />
           <input
             type="text"
@@ -239,7 +239,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             placeholder="Max Price"
             value={searchParams.priceMax}
             onChange={handleInputChange}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-700"
           />
         </div>
         
@@ -248,9 +248,9 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             name="beds"
             value={searchParams.beds}
             onChange={handleInputChange}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-700"
           >
-            <option value="">Bedrooms</option>
+            <option value="" className="text-gray-500">Bedrooms</option>
             <option value="1">1+</option>
             <option value="2">2+</option>
             <option value="3">3+</option>
@@ -260,7 +260,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             name="status"
             value={searchParams.status}
             onChange={handleInputChange}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg placeholder-gray-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-700"
           >
             <option value="Active">Active</option>
             <option value="Pending">Pending</option>
