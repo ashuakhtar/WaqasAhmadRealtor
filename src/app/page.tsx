@@ -1,8 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import ParagonIDX from "../components/ParagonIDX";
-import NewListings from "../components/NewListings";
+import dynamic from 'next/dynamic';
+
+const ParagonIDX = dynamic(() => import("../components/ParagonIDX"), {
+  ssr: false,
+  loading: () => <div className="h-96 flex items-center justify-center"><div className="text-gray-500">Loading search...</div></div>
+});
+
+const NewListings = dynamic(() => import("../components/NewListings"), {
+  ssr: false,
+  loading: () => <div className="h-96 flex items-center justify-center"><div className="text-gray-500">Loading listings...</div></div>
+});
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -400,7 +409,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-lg">
-            <p>&copy; 2024 Waqas Ahmad Real Estate. All rights reserved. | Serving Lower Mainland, British Columbia</p>
+            <p>&copy; 2025 Waqas Ahmad Real Estate. All rights reserved. | Serving Lower Mainland, British Columbia</p>
           </div>
         </div>
       </footer>

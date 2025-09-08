@@ -11,7 +11,7 @@ interface ParagonIDXProps {
 }
 
 export default function ParagonIDX({ searchType = 'basic', showResults = true, height = '800px', displayType = 'search' }: ParagonIDXProps) {
-  const [idxUrl, setIdxUrl] = useState<string>('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
+  const [idxUrl, setIdxUrl] = useState<string>('https://bcres.paragonrels.com/ParagonLS/Default.mvc/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [searchParams, setSearchParams] = useState({
@@ -24,6 +24,9 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
   });
 
   useEffect(() => {
+    // Only run on client side to prevent hydration mismatch
+    if (typeof window === 'undefined') return;
+    
     setMounted(true);
     
     // Initialize the service and get the appropriate IDX URL based on display type
@@ -49,7 +52,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
       } catch (error) {
         console.error('Failed to initialize IDX service:', error);
         // Fallback to the original working URL structure
-        setIdxUrl('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
+        setIdxUrl('https://bcres.paragonrels.com/ParagonLS/Default.mvc/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
       } finally {
         setLoading(false);
       }
@@ -297,6 +300,9 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             frameBorder="0"
             title="Paragon MLS Property Search"
             className="w-full"
+            suppressHydrationWarning={true}
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            referrerPolicy="no-referrer"
           />
         )}
       </div>
