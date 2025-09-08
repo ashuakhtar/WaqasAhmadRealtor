@@ -14,7 +14,7 @@ This guide will help you set up Paragon IDX integration for your real estate web
 
 ```bash
 # Paragon IDX Configuration
-NEXT_PUBLIC_PARAGON_IDX_URL=http://bcres.paragonrels.com/idx
+NEXT_PUBLIC_PARAGON_IDX_URL=https://bcres.paragonrels.com/idx
 NEXT_PUBLIC_PARAGON_IDX_MLS_ID=BCRES
 NEXT_PUBLIC_PARAGON_IDX_SUBSCRIBER_ID=545a2e4d-99ec-4e55-bdd5-0035dd322b1c
 ```

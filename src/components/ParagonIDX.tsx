@@ -301,7 +301,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             title="Paragon MLS Property Search"
             className="w-full"
             suppressHydrationWarning={true}
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
             referrerPolicy="no-referrer"
           />
         )}

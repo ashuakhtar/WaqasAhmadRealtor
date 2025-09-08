@@ -95,7 +95,7 @@ export default function NewListings({ height = '800px', title = 'New Listings' }
             suppressHydrationWarning={true}
             onError={() => setIframeError(true)}
             onLoad={() => setIframeError(false)}
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            sandbox="allow-scripts allow-same-origin allow-forms allow-top-navigation-by-user-activation"
             referrerPolicy="no-referrer"
           />
         )}
