@@ -52,7 +52,7 @@ class ParagonIDXService {
 
   constructor() {
     this.idxConfig = {
-      baseUrl: process.env.NEXT_PUBLIC_PARAGON_IDX_URL || 'http://bcres.paragonrels.com',
+      baseUrl: process.env.NEXT_PUBLIC_PARAGON_IDX_URL || 'https://bcres.paragonrels.com',
       mlsId: process.env.NEXT_PUBLIC_PARAGON_IDX_MLS_ID || 'BCRES',
       subscriberId: process.env.NEXT_PUBLIC_PARAGON_IDX_SUBSCRIBER_ID || '545a2e4d-99ec-4e55-bdd5-0035dd322b1c'
     };
