@@ -11,7 +11,7 @@ interface ParagonIDXProps {
 }
 
 export default function ParagonIDX({ searchType = 'basic', showResults = true, height = '800px', displayType = 'search' }: ParagonIDXProps) {
-  const [idxUrl, setIdxUrl] = useState<string>('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
+  const [idxUrl, setIdxUrl] = useState<string>('https://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [searchParams, setSearchParams] = useState({
@@ -52,7 +52,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
       } catch (error) {
         console.error('Failed to initialize IDX service:', error);
         // Fallback to the original working URL structure
-        setIdxUrl('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
+        setIdxUrl('https://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
       } finally {
         setLoading(false);
       }
