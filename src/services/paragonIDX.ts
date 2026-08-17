@@ -44,7 +44,6 @@ export interface IDXConfig {
   baseUrl: string;
   mlsId: string;
   subscriberId: string;
-  sessionGuid?: string;
 }
 
 class ParagonIDXService {
@@ -53,10 +52,9 @@ class ParagonIDXService {
 
   constructor() {
     this.idxConfig = {
-      baseUrl: process.env.NEXT_PUBLIC_PARAGON_IDX_URL || 'https://bcres.paragonrels.com',
+      baseUrl: process.env.NEXT_PUBLIC_PARAGON_IDX_URL || 'http://bcres.paragonrels.com',
       mlsId: process.env.NEXT_PUBLIC_PARAGON_IDX_MLS_ID || 'BCRES',
-      subscriberId: process.env.NEXT_PUBLIC_PARAGON_IDX_SUBSCRIBER_ID || '545a2e4d-99ec-4e55-bdd5-0035dd322b1c',
-      sessionGuid: process.env.NEXT_PUBLIC_PARAGON_IDX_SESSION_GUID
+      subscriberId: process.env.NEXT_PUBLIC_PARAGON_IDX_SUBSCRIBER_ID || '545a2e4d-99ec-4e55-bdd5-0035dd322b1c'
     };
   }
 
@@ -76,8 +74,7 @@ class ParagonIDXService {
 
   // Build the IDX URL with parameters
   buildIDXUrl(params?: SearchParams): string {
-    // Try a simpler URL structure that might work better
-    const baseUrl = `https://bcres.paragonrels.com/ParagonLS/Default.mvc/idx.aspx`;
+    const baseUrl = `${this.idxConfig.baseUrl}/idx/idx.aspx`;
     const urlParams = new URLSearchParams();
     
     // Add core parameters
@@ -108,29 +105,23 @@ class ParagonIDXService {
   // Get featured properties URL
   getFeaturedURL(): string {
     const urlParams = new URLSearchParams();
-    
-    // Add session GUID if available
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append('RMLS_SESSION_GUID', this.idxConfig.sessionGuid);
-    }
-    
+
     urlParams.append('Mls', this.idxConfig.mlsId);
     urlParams.append('Subscriber', this.idxConfig.subscriberId);
-    urlParams.append('Featured', 'true');
-    
-    return `${this.idxConfig.baseUrl}/ParagonLS/Default.mvc/idx.aspx?${urlParams.toString()}`;
+    urlParams.append('Featured', '1');
+
+    return `${this.idxConfig.baseUrl}/idx/idx.aspx?${urlParams.toString()}`;
   }
 
   // Get new listings URL (Featured=2)
   getNewListingsURL(): string {
-    // Try a different approach - use a basic search URL that should work
     const urlParams = new URLSearchParams({
       Mls: this.idxConfig.mlsId,
-      Subscriber: this.idxConfig.subscriberId
+      Subscriber: this.idxConfig.subscriberId,
+      Featured: '2'
     });
-    
-    // Try the basic search URL without any special parameters
-    return `https://bcres.paragonrels.com/ParagonLS/Default.mvc/idx.aspx?${urlParams.toString()}`;
+
+    return `${this.idxConfig.baseUrl}/idx/idx.aspx?${urlParams.toString()}`;
   }
 
   // Alternative new listings URL without Featured parameter
@@ -142,17 +133,12 @@ class ParagonIDXService {
   // Get property details URL
   getPropertyDetailsURL(propertyId: string): string {
     const urlParams = new URLSearchParams();
-    
-    // Add session GUID if available
-    if (this.idxConfig.sessionGuid) {
-      urlParams.append('RMLS_SESSION_GUID', this.idxConfig.sessionGuid);
-    }
-    
+
     urlParams.append('Mls', this.idxConfig.mlsId);
     urlParams.append('Subscriber', this.idxConfig.subscriberId);
     urlParams.append('PropertyId', propertyId);
-    
-    return `${this.idxConfig.baseUrl}/ParagonLS/Default.mvc/idx.aspx?${urlParams.toString()}`;
+
+    return `${this.idxConfig.baseUrl}/idx/idx.aspx?${urlParams.toString()}`;
   }
 
   // Search properties - returns the URL for IDX framing
