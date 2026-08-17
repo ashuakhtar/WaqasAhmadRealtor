@@ -113,20 +113,8 @@ class ParagonIDXService {
     return `${this.idxConfig.baseUrl}/idx/idx.aspx?${urlParams.toString()}`;
   }
 
-  // Get new listings URL (Featured=2)
+  // Get new listings URL - general board search (not restricted to this subscriber's own inventory)
   getNewListingsURL(): string {
-    const urlParams = new URLSearchParams({
-      Mls: this.idxConfig.mlsId,
-      Subscriber: this.idxConfig.subscriberId,
-      Featured: '2'
-    });
-
-    return `${this.idxConfig.baseUrl}/idx/idx.aspx?${urlParams.toString()}`;
-  }
-
-  // Alternative new listings URL without Featured parameter
-  getNewListingsURLAlternative(): string {
-    // Try a completely different approach - use a basic search URL
     return this.getSearchURL();
   }
 

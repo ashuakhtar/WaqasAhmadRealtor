@@ -9,7 +9,7 @@ interface NewListingsProps {
 }
 
 export default function NewListings({ height = '800px', title = 'New Listings' }: NewListingsProps) {
-  const [idxUrl, setIdxUrl] = useState<string>('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c&Featured=2');
+  const [idxUrl, setIdxUrl] = useState<string>('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [iframeError, setIframeError] = useState(false);
@@ -24,21 +24,13 @@ export default function NewListings({ height = '800px', title = 'New Listings' }
     const initializeService = async () => {
       try {
         await paragonIDXService.initialize();
-        // Try the new listings URL first
         const newListingsUrl = await paragonIDXService.getNewListings();
         setIdxUrl(newListingsUrl);
       } catch (error) {
         console.error('Failed to initialize IDX service:', error);
-        // Try alternative URL without Featured parameter
-        try {
-          const alternativeUrl = paragonIDXService.getNewListingsURLAlternative();
-          setIdxUrl(alternativeUrl);
-        } catch (altError) {
-          console.error('Alternative URL also failed:', altError);
-          // Final fallback to the original working URL structure
-          const fallbackUrl = 'http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c&Featured=2';
-          setIdxUrl(fallbackUrl);
-        }
+        // Final fallback to the original working URL structure
+        const fallbackUrl = 'http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c';
+        setIdxUrl(fallbackUrl);
       } finally {
         setLoading(false);
       }
