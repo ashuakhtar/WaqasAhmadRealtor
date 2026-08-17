@@ -87,6 +87,7 @@ export default function NewListings({ height = '800px', title = 'New Listings' }
             suppressHydrationWarning={true}
             onError={() => setIframeError(true)}
             onLoad={() => setIframeError(false)}
+            referrerPolicy="origin"
           />
         )}
       </div>
