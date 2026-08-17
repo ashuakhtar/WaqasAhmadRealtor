@@ -3,93 +3,6 @@ import ParagonIDX from "../../components/ParagonIDX";
 import NewListings from "../../components/NewListings";
 
 export default function PropertiesPage() {
-  const properties = [
-    {
-      id: 1,
-      title: "Modern Family Home",
-      location: "Fleetwood, Surrey, BC",
-      price: "$899,000",
-      beds: 4,
-      baths: 3,
-      sqft: "2,200",
-      type: "Single Family",
-      status: "New Listing",
-      statusColor: "bg-red-500",
-      imageGradient: "from-blue-400 to-blue-600",
-      description: "Beautiful modern home in the heart of Fleetwood. Features open concept living, updated kitchen, and spacious backyard."
-    },
-    {
-      id: 2,
-      title: "Luxury Townhouse",
-      location: "South Surrey, BC",
-      price: "$1,250,000",
-      beds: 3,
-      baths: 2.5,
-      sqft: "1,800",
-      type: "Townhouse",
-      status: "Open House",
-      statusColor: "bg-blue-500",
-      imageGradient: "from-green-400 to-green-600",
-      description: "Stunning luxury townhouse with premium finishes, granite countertops, and private garden."
-    },
-    {
-      id: 3,
-      title: "Cozy Condo",
-      location: "Guildford, Surrey, BC",
-      price: "$675,000",
-      beds: 2,
-      baths: 2,
-      sqft: "1,100",
-      type: "Condo",
-      status: "Just Sold",
-      statusColor: "bg-green-500",
-      imageGradient: "from-purple-400 to-purple-600",
-      description: "Well-maintained condo with modern amenities, secure parking, and close to shopping and transit."
-    },
-    {
-      id: 4,
-      title: "Executive Home",
-      location: "Cloverdale, Surrey, BC",
-      price: "$1,450,000",
-      beds: 5,
-      baths: 4,
-      sqft: "3,200",
-      type: "Single Family",
-      status: "Featured",
-      statusColor: "bg-yellow-500",
-      imageGradient: "from-orange-400 to-orange-600",
-      description: "Executive family home with custom finishes, home theater, and extensive landscaping."
-    },
-    {
-      id: 5,
-      title: "Investment Property",
-      location: "Newton, Surrey, BC",
-      price: "$750,000",
-      beds: 3,
-      baths: 2,
-      sqft: "1,600",
-      type: "Single Family",
-      status: "For Rent",
-      statusColor: "bg-indigo-500",
-      imageGradient: "from-teal-400 to-teal-600",
-      description: "Great investment opportunity with rental income potential and future development possibilities."
-    },
-    {
-      id: 6,
-      title: "Waterfront Condo",
-      location: "White Rock, BC",
-      price: "$1,100,000",
-      beds: 2,
-      baths: 2,
-      sqft: "1,300",
-      type: "Condo",
-      status: "New Listing",
-      statusColor: "bg-red-500",
-      imageGradient: "from-cyan-400 to-cyan-600",
-      description: "Stunning waterfront condo with ocean views, balcony, and resort-style amenities."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -143,44 +56,6 @@ export default function PropertiesPage() {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <NewListings height="700px" title="New Listings in Surrey" />
-        </div>
-      </section>
-
-      {/* Properties Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {properties.map((property) => (
-              <div key={property.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className={`h-48 bg-gradient-to-br ${property.imageGradient} relative`}>
-                  <div className={`absolute top-4 left-4 ${property.statusColor} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
-                    {property.status}
-                  </div>
-                  <div className="absolute top-4 right-4 bg-white/90 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
-                    {property.price}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{property.title}</h3>
-                  <p className="text-gray-600 mb-4">{property.location}</p>
-                  <p className="text-gray-700 mb-4 text-sm">{property.description}</p>
-                  <div className="flex justify-between text-sm text-gray-500 mb-4">
-                    <span>{property.beds} beds</span>
-                    <span>{property.baths} baths</span>
-                    <span>{property.sqft} sqft</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600 bg-gray-100 px-2 py-1 rounded">
-                      {property.type}
-                    </span>
-                    <button className="bg-gradient-to-r from-slate-700 to-slate-800 text-white py-2 px-4 rounded-lg hover:from-slate-800 hover:to-slate-900 transition-all duration-300 text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

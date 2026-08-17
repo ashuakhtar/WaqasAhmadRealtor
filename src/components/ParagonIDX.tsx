@@ -11,7 +11,7 @@ interface ParagonIDXProps {
 }
 
 export default function ParagonIDX({ searchType = 'basic', showResults = true, height = '800px', displayType = 'search' }: ParagonIDXProps) {
-  const [idxUrl, setIdxUrl] = useState<string>('https://bcres.paragonrels.com/ParagonLS/Default.mvc/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
+  const [idxUrl, setIdxUrl] = useState<string>('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
   const [loading, setLoading] = useState(true);
   const [mounted, setMounted] = useState(false);
   const [searchParams, setSearchParams] = useState({
@@ -52,7 +52,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
       } catch (error) {
         console.error('Failed to initialize IDX service:', error);
         // Fallback to the original working URL structure
-        setIdxUrl('https://bcres.paragonrels.com/ParagonLS/Default.mvc/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
+        setIdxUrl('http://bcres.paragonrels.com/idx/idx.aspx?Mls=BCRES&Subscriber=545a2e4d-99ec-4e55-bdd5-0035dd322b1c');
       } finally {
         setLoading(false);
       }
@@ -143,17 +143,17 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             <option value="Condo">Condo</option>
           </select>
           
-          <select 
+          <select
             name="priceMax"
             value={searchParams.priceMax}
             onChange={handleInputChange}
             className="w-full p-4 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Price Range</option>
-            <option value="$500K - $750K">$500K - $750K</option>
-            <option value="$750K - $1M">$750K - $1M</option>
-            <option value="$1M - $1.5M">$1M - $1.5M</option>
-            <option value="$1.5M+">$1.5M+</option>
+            <option value="750000">$500K - $750K</option>
+            <option value="1000000">$750K - $1M</option>
+            <option value="1500000">$1M - $1.5M</option>
+            <option value="999999999">$1.5M+</option>
           </select>
           
           <select 
@@ -188,7 +188,23 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
         </form>
 
         {/* IDX Frame */}
-        
+        <div className="bg-white/10 rounded-2xl overflow-hidden">
+          {!mounted || loading ? (
+            <div className="h-64 flex items-center justify-center">
+              <div className="text-white/70">Loading MLS search...</div>
+            </div>
+          ) : (
+            <iframe
+              src={idxUrl}
+              width="100%"
+              height={height}
+              frameBorder="0"
+              title="Paragon MLS Property Search"
+              className="w-full"
+              suppressHydrationWarning={true}
+            />
+          )}
+        </div>
       </div>
     );
   }
@@ -301,8 +317,6 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             title="Paragon MLS Property Search"
             className="w-full"
             suppressHydrationWarning={true}
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
-            referrerPolicy="no-referrer"
           />
         )}
       </div>
