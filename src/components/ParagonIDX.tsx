@@ -202,6 +202,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
               title="Paragon MLS Property Search"
               className="w-full"
               suppressHydrationWarning={true}
+              referrerPolicy="origin"
             />
           )}
         </div>
@@ -317,6 +318,7 @@ export default function ParagonIDX({ searchType = 'basic', showResults = true, h
             title="Paragon MLS Property Search"
             className="w-full"
             suppressHydrationWarning={true}
+            referrerPolicy="origin"
           />
         )}
       </div>
